@@ -1,0 +1,218 @@
+<nav>
+    <a href="#synopsis">Synopsis</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#trailer">Trailer</a>
+    <a href="#crew&cast">Crew & Cast</a>
+    <a href="#director'sstatement">Director's Statement</a>
+    <a href="#watch">Watch Film</a>
+    <a href="#poll">Audience Poll</a>
+    <a href="#contact">Contacts</a>
+</nav>
+
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Born Free?</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+<div class="hero">
+
+    <img src="/static/poster.jpeg"
+         class="hero-img">
+
+    <div class="overlay"></div>
+
+    <div class="hero-text">
+        <h1>BORN FREE?</h1>
+        <p>Freedom Has A Price.</p>
+    </div>
+
+</div>
+<hr>
+
+<section class="quote-section">
+    <h1>"What does Freedom really mean?"</h1>
+</section>
+<hr>
+
+        <img src="/static/fire_still.jpeg" width="500">
+
+        <p style="font-size:24px;">A short film about Freedom, Historical injustice, and Resistance.</p>
+
+        <hr>
+
+<section id="synopsis">
+<div class="fade-in">
+        <h2>Synopsis</h2>
+</div>
+        <div class="width:70%; margin:auto;">
+        <p>
+        A young woman is drawn into a symbolic Art Realm populated by ancestral figures, enslaved labourers, displaced families, and matric students.</p>
+            <p> In this realm, she is forced to interrogate the true meaning of "Freedom" in a democratic South Africa.
+        </p>
+        </div>
+        </section>
+
+        <hr>
+
+<section id="gallery">
+        <img src="/static/poster.jpeg" width="300">
+        <img src="/static/BORN FREE ALT POSTER.png" width="677">
+        </section>
+        <hr>
+
+<section id="trailer">
+        <h2>Watch Trailer</h2>
+     <a href="https://drive.google.com/file/d/17HL5ht4-YuEZHkpAICYtV02Hq3MOkzZ9/view?usp=drive_link"
+       target="_blank"
+        class="watch-button">  ▶ Watch Trailer
+     </a>
+      <iframe
+        src="https://drive.google.com/file/d/17HL5ht4-YuEZHkpAICYtV02Hq3MOkzZ9/preview"
+        width="800"
+        height="450"
+        allow="autoplay">
+    </iframe>
+        </section>
+        <hr>
+
+        <h2>Gallery</h2>
+<img src="/static/IMG_0269.JPEG" width="100">
+ <img src="/static/IMG_0266.JPEG" width="100">
+ <img src="/static/IMG_0274.JPEG" width="100">
+ <img src="/static/IMG_0268.JPEG" width="100">
+<img src="/static/IMG_0271.JPEG" width="100">
+<img src="/static/IMG_0267.JPEG" width="100">
+<img src="/static/IMG_0272.JPEG" width="100">
+<img src="/static/IMG_0291.JPEG" width="100">
+<img src="/static/IMG_0270.JPEG" width="100">
+<img src="/static/IMG_0273.JPEG" width="100" height="178">
+
+        <hr>
+
+<section id="crew&cast">
+       <span class="name"><h2>Crew & Cast</h2></span>
+        <p>Director: <span class="name"> <strong>Mlangeni Dlamini</strong></span></p>
+        <p>Co-Director: <span class="name"><strong>Greatecute Ngqwarushe</strong></span></p>
+    <p>Producer: <span class="name"><strong>Mbali Mlotshwa</strong></span></p>
+     <p>Co-Producer: <span class="name"><strong>Mfundo Zenze</strong></span></p>
+    <p>Writer: <span class="name"><strong>Candy Ramokaelo</strong></span></p>
+    <p>Cinematographer: <span class="name"><strong>Sambulo Mncube</strong></span></p>
+    <p>Sound Designer: <span class="name"><strong>Nqobani Mthombeni</strong></span></p>
+    <p>Character Design & Styling: <span class="name"><strong>Xyra Mbatha</strong></span></p>
+    <p>Editor: <span class="name"><strong>Thuli Sithebe</strong></span></p>
+    <p>Starring: <span class="name"><strong>Nombasa Qulu</strong></span></p>
+        </section>
+        <hr>
+
+<section id="director'sstatement">
+         <h2> Director's Statement</h2>
+    <div class="director-text">
+
+         <p>Born Free? examines the true meaning of liberation and what it means to be truly free in a democratic South Africa. </p>
+        <p>This film emphasises the disparity between "political freedom" and "economic freedom." </p>
+        <p>Most importantly, Born Free? is asking, "Was Freedom truly achieved, or is it still an ongoing struggle?" </p>
+        </div>
+         </section>
+         <hr>
+
+<section id="watch">
+
+    <h2>Watch Born Free?</h2>
+
+    <p>
+        Click below to watch the full film.
+    </p>
+
+    <a href="YOUR_LINK_HERE" target="_blank">
+        Watch Now
+    </a>
+    <hr>
+
+</section>
+
+<section id="poll">
+         <h2>Audience Response</h2>
+         <p>What did you think of Born Free?</p>
+{% if not has_voted %}
+         <div>
+
+              <a href="/vote/loved">
+        <button type="button">
+            ❤️ Loved It
+        </button>
+    </a>
+
+    <a href="/vote/good">
+        <button type="button">
+            👍 Good
+        </button>
+    </a>
+
+    <a href="/vote/notforme">
+        <button type="button">
+            👎 Not For Me
+        </button>
+    </a>
+
+    </div>
+    {% else %}
+    <div class="vote-confirmation">
+
+    <h3>Thank You for Voting</h3>
+
+    <p>
+        Your response has been recorded.
+    </p>
+
+    <p>
+        Freedom means different things to different people.
+        Thank you for joining the conversation.
+    </p>
+
+</div>
+
+{% endif %}
+
+    <h3>Current Audience Sentiment</h3>
+
+    <div class="poll-results">
+
+        <p>❤️ Loved It - {{ loved }}% ({{ loved_votes }} votes)</p>
+        <div class="bar-container">
+            <div class="bar" style="width:{{ loved }}%;"></div>
+        </div>
+
+        <p>👍 Good - {{ good }}% ({{ good_votes }} votes)</p>
+        <div class="bar-container">
+            <div class="bar" style="width:{{ good }}%;"></div>
+        </div>
+
+        <p>👎 Not For Me - {{ notforme }}% ({{ notforme_votes }} votes)</p>
+        <div class="bar-container">
+            <div class="bar" style="width:{{ notforme }}%;"></div>
+        </div>
+
+        </div>
+    <p class="total-votes">
+    Based on {{ total_votes }} audience responses.
+</p>
+    <p class="poll-note">
+    Audience responses are collected anonymously.
+</p>
+
+         </section>
+
+<hr>
+
+<section id="contact">
+        <h2>Contacts</h2>
+        <p>greatecutengqwarushe@gmail.com</p>
+        </section>
+<hr>
+    </body>
