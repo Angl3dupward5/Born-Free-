@@ -195,3 +195,24 @@ nav a {
     opacity: 0.8;
     margin-top: 10px;
 }
+
+#crew-cast {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.credit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 320px;
+}
+
+.role {
+    color: white;
+}
+
+.name {
+    color: #d4af37;
+    font-weight: bold;
+}
