@@ -3,7 +3,7 @@ import sqlite3
 
 app = Flask(__name__)
 app.secret_key = "bornfree_secret_key"
-DEVELOPER_MODE = True
+DEVELOPER_MODE = False
 
 def get_votes():
     conn = sqlite3.connect("poll.db")
